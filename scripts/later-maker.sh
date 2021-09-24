@@ -15,7 +15,7 @@ else
 fi
 
 # Grab the file
-curl $url > $lookups_dir/$download_epoch-egress-ip=ranges.csv
+curl $url > $lookups_dir/$download_epoch-egress-ip-ranges.csv
 
 # Check download worked
 file=$lookups_dir/$download_epoch-egress-ip-ranges.csv
