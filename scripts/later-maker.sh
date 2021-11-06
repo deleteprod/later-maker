@@ -26,8 +26,9 @@ echo $splunk_path_segment
 lookups_dir="$(pwd)/lookups"
 if test -d "$lookups_dir";
   then
-  echo "Lookups directory exists"
+  echo "Lookups directory exists."
 else
+  echo "No lookups directory. Creating now."
   mkdir -p $lookups_dir
 fi
 
@@ -38,9 +39,9 @@ curl $url > $lookups_dir/$download_epoch-egress-ip-ranges.csv
 file=$lookups_dir/$download_epoch-egress-ip-ranges.csv
 if test -f "$file";
   then
-  echo "Successfully downloaded file"
+  echo "Successfully downloaded file."
 else
-  echo "Something went wrong with the download"
+  echo "Something went wrong with the download."
 fi
 
 # Hash it
@@ -50,9 +51,9 @@ sha256sum $lookups_dir/$download_epoch-egress-ip=ranges.csv > $lookups_dir/$down
 file_hash=$lookups_dir/$download_epoch-egress-ip-ranges.hash
 if test -f "$file_hash";
   then
-  echo "Successfully hashed the file"
+  echo "Successfully hashed the file."
 else
-  echo "Something went wrong with the hash function"
+  echo "Something went wrong with the hash function."
 fi
 
 # Trim the hash
