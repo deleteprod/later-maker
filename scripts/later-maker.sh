@@ -45,7 +45,7 @@ else
 fi
 
 # Hash it
-sha256sum $lookups_dir/$download_epoch-egress-ip=ranges.csv > $lookups_dir/$download_epoch-egress-ip=ranges.hash
+sha256sum $lookups_dir/$download_epoch-egress-ip-ranges.csv > $lookups_dir/$download_epoch-egress-ip-ranges.hash
 
 # Check hashing worked
 file_hash=$lookups_dir/$download_epoch-egress-ip-ranges.hash
